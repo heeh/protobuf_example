@@ -1,4 +1,4 @@
-## Create a cpp class
+## Protobuf JNI Example
 
 ```bash
 protoc -I=. --cpp_out=. ./simpleResults.proto  # Create a C++ class
@@ -9,4 +9,3 @@ objdump -TC libfoo.so  # Inspect the shared library
 javac -cp '.:protobuf-java-4.0.0-rc-2.jar' filebenchmark/Main.java  # Compile a java file to bytecode
 java -cp '.:protobuf-java-4.0.0-rc-2.jar' -Djava.library.path=. filebenchmark.Main  # Throw the bytecode into JVM
 ```
-
