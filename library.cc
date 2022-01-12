@@ -4,7 +4,7 @@
 #include "simpleResults.pb.h"
 
 extern "C" JNIEXPORT jobject JNICALL
-Java_com_securityandsafetythings_examples_helloworld_rest_HelloWorldEndpoint_createSR(JNIEnv *env, jclass clazz) {
+Java_filebenchmark_CreateSR(JNIEnv *env, jclass clazz) {
 
   // Dummy input
   filebenchmark::SimpleResults* SR = new filebenchmark::SimpleResults();
@@ -12,7 +12,7 @@ Java_com_securityandsafetythings_examples_helloworld_rest_HelloWorldEndpoint_cre
   SR->set_inf_time_ms(100);
 
   // Get the class we wish to return an instance of
-  jclass srclass = env->FindClass("com/securityandsafetythings/libraries/filebenchmark/SimpleResultsOuterClass");
+  jclass srclass = env->FindClass("filebenchmark/SimpleResultsOuterClass/SimpleResults");
 
   // Get the method id of an empty constructor in clazz
   jmethodID constructor = env->GetMethodID(srclass, "<init>", "()V");
